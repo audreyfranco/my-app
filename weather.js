@@ -23,9 +23,15 @@ let month = months[now.getMonth()];
 h2.innerHTML = `${day}, ${month} ${date}, ${year}, ${hours}:${minutes}`;
 
 function displayWeatherCondition(response) {
-  console.log(response.data.name);
+  console.log(response.data);
+  let descriptionElement = document.querySelector("#description");
+  let humidityElement = document.querySelector("#humidity");
+  let windElement = document.querySelector("#wind");
   document.querySelector("h1").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML =Math.round(response.data.main.temp);
+  document.querySelector("#description").innerHTML = response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(response.data.wind.speed);
 }
 
 function handleSubmit(event) {
