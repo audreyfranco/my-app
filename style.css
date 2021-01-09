@@ -49,6 +49,10 @@ ul {
   list-style-type: none;
 }
 
+li:first-letter {
+  text-transform: capitalize;
+}
+
 .col-2 {
   padding: 10px;
   margin: 10px;
@@ -67,4 +71,13 @@ ul {
 
 .units {
   font-size: 30px;
+}
+
+.current .active {
+  color: #353d54;
+  cursor: default;
+}
+
+.current .active:hover {
+  text-decoration: none;
 }
