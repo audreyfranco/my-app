@@ -18,16 +18,16 @@
     <div class="container">
     <form id="search-form">
         <input type="text" placeholder="🔍 Search city" id="search-text-input" />
-        <input type="submit" value="Search" class="btn btn-outline-info" />
-        <input type="submit" value="Current Location" class="btn btn-outline-info" id="current-location-button" />
+        <input type="submit" value="Search" class="btn btn-outline-dark" />
+        <input type="submit" value="Current Location" class="btn btn-outline-dark" id="current-location-button" />
     </form>
     <div class="col-6">
        
     </div>
     <div class="row">
         <div class="col-6">
-            <h1>
-                Los Angeles
+            <h1 id="city">
+                
             </h1>
             <h2>
                 
@@ -35,7 +35,8 @@
         </div>
         <div class="col-6">
                     <div class="current">
-                        <span class="temperature" id="temperature">19</span><span class="units">
+                        <img src="" alt="Icon" id="icon" class="float-left" />
+                        <span class="temperature" id="temperature"></span><span class="units">
                             <a href="#" id="celsius-link" class="active">°C</a> |
                             <a href="#" id="fahrenheit-link">°F</a>
                         </span>
@@ -46,11 +47,7 @@
                         High 77°/ Low 50°
                         </li>
                         <li id="description">
-                        <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="Icon" id="icon" class="float-left" />
-                        Sunny
-                        </li>
-                        <li>
-                            Percipitation:
+                        Clear
                         </li>
                         <li>
                             Humidity: <span id="humidity"></span>%
@@ -63,15 +60,13 @@
         </div>
     </div>
     <hr>
-        <div class="row">
+        <div class="row weather-forecast" id="forecast">
                 <div class="col-2">
                     Monday
                     <br />
                     77°/50°
                     <br />
                     <i class="fas fa-sun"></i>
-                    <br />
-                    Sunny
                 </div>
                 <div class="col-2">
                     Tuesday
@@ -79,8 +74,6 @@
                     77°/50°
                     <br />
                     <i class="fas fa-sun"></i>
-                    <br />
-                    Sunny
                 </div>
                 <div class="col-2">
                     Wednesday
@@ -88,8 +81,6 @@
                     75°/48°
                     <br />
                     <i class="fas fa-sun"></i>
-                    <br />
-                    Sunny
                 </div>
                 <div class="col-2">
                     Thursday
@@ -97,8 +88,6 @@
                     70°/48°
                     <br />
                     <i class="fas fa-cloud-sun"></i>
-                    <br />
-                    Partly Cloudy
                 </div>
                 <div class="col-2">
                     Friday
@@ -106,8 +95,6 @@
                     70°/48°
                     <br />
                     <i class="fas fa-sun"></i>
-                    <br />
-                    Sunny
                 </div>
         </div>
     </div>
